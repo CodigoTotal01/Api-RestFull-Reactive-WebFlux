@@ -27,6 +27,7 @@ public class Producto {
 
     //indicamos que el objeto relacional se iten que validar
     @Valid
+    @NotNull
     private Categoria categoria;
 
     private String foto;
