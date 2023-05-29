@@ -61,6 +61,11 @@ public class ProductoServiceImpl implements ProductoService{
     }
 
     @Override
+    public Mono<Categoria> findCategoriaByNombre(String nombre) {
+        return categoriaDao.findByNombre(nombre);
+    }
+
+    @Override
     public Flux<Producto> findAllConNombreUppercase() {
         return dao.findAll().map(producto -> {
             producto.setNombre(producto.getNombre().toUpperCase());

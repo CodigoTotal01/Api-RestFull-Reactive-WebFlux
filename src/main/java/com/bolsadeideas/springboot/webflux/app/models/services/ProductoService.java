@@ -25,6 +25,6 @@ public interface ProductoService {
     //TEST
 
     public Mono<Producto> findByNombre(String nombre);
-
+    public Mono<Categoria> findCategoriaByNombre (String nombre);
 
 }
